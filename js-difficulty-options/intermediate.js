@@ -8,14 +8,25 @@ const menu = {
 // HINT: Function to display menu items by category
 function displayMenuItems(menu) {
     // HINT: Get a reference to the menu container in your HTML
+    const menuEl = document.getElementById('menu');
     
     // HINT: Loop through each category and its items in the menu object
-    for (const [category, items] of Object.entries()) {
+    for (const [category, items] of Object.entries(menu)) {
         // HINT: Create an h3 element for the category
+        let categoryEl = document.createElement('h3');
+        categoryEl.textContent = category;
         
         // HINT: Append the category heading to the menu container
+        menuEl.appendChild(categoryEl)
         
         // HINT: Create a list element for the items in the category
+        let itemsEl = document.createElement('li');
+        
+        for(x in items){
+            itemsEl.textContent = x;
+        }
+        menuEl.appendChild(itemsEl);
+
         
         // HINT: Loop through the items in the category and create list items
             
@@ -24,9 +35,11 @@ function displayMenuItems(menu) {
             
             // HINT: Append the list item to the category's list
         
-        });
+        };
     }
-}
+
+    displayMenuItems(menu);
+
 
 // HINT: Callback function for adding an item to the order
 function addToOrder(itemName) {
