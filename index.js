@@ -45,7 +45,7 @@ function addToOrder(itemName,itemPrice) {
     orderItemsEl.appendChild(addOrder);
 
     // Calculate and update the total price
-    totalPrice += itemPrice;
+    totalPrice += itemPrice * 17.63;
     orderTotalEl.textContent = totalPrice;
 }
 
