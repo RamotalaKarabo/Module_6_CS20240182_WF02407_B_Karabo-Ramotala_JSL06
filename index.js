@@ -44,11 +44,9 @@ function addToOrder(itemName,itemPrice) {
     addOrder.textContent = itemName.textContent;
     orderItemsEl.appendChild(addOrder);
 
-    totalPrice+=itemPrice;
-    orderTotalEl.textContent = totalPrice;
-    
     // Calculate and update the total price
-
+    totalPrice += itemPrice;
+    orderTotalEl.textContent = totalPrice;
 }
 
 // Function to initialize the menu system
